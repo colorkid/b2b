@@ -164,8 +164,7 @@ h1{
 }
 
 .accent-word{
-	color: #fff;
-	text-shadow: 2px 2px 3px rgba(33, 33, 33, 0.5);
+	color: @accent;
 }
 
 .section--one{
@@ -186,14 +185,40 @@ h1{
 }
 
 .arrow-down{
-	position: absolute;
-	bottom: 20px;
-	width: 35px;
+	display: flex;
+	justify-content: center;
+	width: 100%;
 	height: 35px;
-	margin: 0 10%;
+	position: absolute;
+	left: 0;
+	bottom: 20px;
 	background-image: url("../img/down-arrow.svg");
 	background-position: 50%;
-	background-size: cover;
+	background-size: 35px 35px;
+	background-repeat: no-repeat;
 	z-index: 1;
 	cursor: pointer;
+}
+
+.section--one__button{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 200px;
+	height: 50px;
+	margin: 0 10%;
+	border-radius: 2px;
+	color: #fff;
+	border: none;
+	font-size: 18px;
+	box-shadow: 0 2px 5px 0px rgba(33, 33, 33, 0.1);
+	cursor: pointer;
+	text-transform: uppercase;
+	background: @accent;
+	z-index: 1;
+	transition: background 0.2s;
+
+	&:hover{
+    	background: darken(@accent, 5%);
+    }
 }
