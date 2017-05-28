@@ -8,6 +8,7 @@
 	<link rel="stylesheet/less" type="text/css" href="css/style.less">
 	<script src="less.js" type="text/javascript"></script>
 	<script src="js/jquery-3.2.0.min.js" type="text/javascript"></script>
+	<script src="js/parallax.min.js" type="text/javascript"></script>
 </head>
   <body>
   	<header class="header">
@@ -15,10 +16,10 @@
 	  		<div class="logo">LOGO</div>
 	  		<nav class="menu">
 	  			<ul class="menu__ul">
-	  				<li class="menu__li"><a href="#" class="menu__a">Первая кнопка</a></li>
-	  				<li class="menu__li"><a href="#" class="menu__a">Первая кнопка</a></li>
-	  				<li class="menu__li"><a href="#" class="menu__a">Первая кнопка</a></li>
-	  				<li class="menu__li"><a href="#" class="menu__a">Первая кнопка</a></li>
+	  				<li class="menu__li"><a href="#" class="menu__a">Что такое geo объявления?</a></li>
+	  				<li class="menu__li"><a href="#" class="menu__a">Этапы работ</a></li>
+	  				<li class="menu__li"><a href="#" class="menu__a">Почему это эффективно?</a></li>
+	  				<li class="menu__li"><a href="#" class="menu__a">Как посчитать прибыль?</a></li>
 	  			</ul>
 	  		</nav>
 	  	</div>	
@@ -26,8 +27,14 @@
   	<main>
 	  	<section class="section section--one">
 	  		<div class="wrapper">
-	  			<h1>Увеличим посещаемость салона красоты на 43% за 1 месяц Используя <span class="accent-word">geo</span> объявления по вашему району</h1>
+	  			<h1>Увеличим посещаемость салона красоты на 43% за 1 месяц используя <span class="accent-word">geo</span> объявления по вашему району</h1>
 	  			<button class="button button--one">Узнать как</button>
+	  			<div class="arrow-down"></div>
+	  		</div>
+	  	</section>
+	  	<section class="section section--two">
+	  		<div class="wrapper">
+	  			<h2>Что такое geo объявления?</h2>
 	  			<div class="arrow-down"></div>
 	  		</div>
 	  	</section>
@@ -36,21 +43,25 @@
   	<div class="popup-area">
   		<div class="popup">
   			<form action="form1.php" method="post" class="form">
-  				<label for="formTel" class="popup__label">Введите</label>
+  				<span class="popup__title">Получить консультацию</span>
+  				<label for="formTel" class="popup__label">Введите номер телефона</label>
   				<input type="tel" name="tel" class="popup__tel" id="formTel" placeholder="Ваш номер">
-  				<p class="popup__message">и наш менеджер даст бесплатную консультацию, как увеличить посещаемость вашего салона красоты</p>
+  				<p class="popup__message">и наш менеджер даст <span class="popup__acent">бесплатную консультацию</span>, как увеличить посещаемость вашего салона красоты</p>
   				<input type="submit" class="popup__submit" value="Получить">
   			</form>
   		</div>
   		<span class="popup-area__close"></span>
   	</div>
-  	<script type="text/javascript">
+  	<script type="text/javascript">//Показать/скрыть попап
   		$(".button").click(function(){
   			$(".popup-area").addClass("popup-area--show");
   		});
   		$(".popup-area__close").click(function(){
   			$(".popup-area").removeClass("popup-area--show");
   		});
+  	</script>
+  	<script type="text/javascript">
+  		$('.section--one').parallax({imageSrc: 'img/first-back-2.jpg', naturalWidth: '100%'});
   	</script>
   </body>
 </html>
