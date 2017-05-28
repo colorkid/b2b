@@ -27,11 +27,30 @@
 	  	<section class="section section--one">
 	  		<div class="wrapper">
 	  			<h1>Увеличим посещаемость салона красоты на 43% за 1 месяц Используя <span class="accent-word">geo</span> объявления по вашему району</h1>
-	  			<button class="section--one__button">Узнать как</button>
+	  			<button class="button button--one">Узнать как</button>
 	  			<div class="arrow-down"></div>
 	  		</div>
 	  	</section>
   	</main>
   	<footer class="footer"></footer>
+  	<div class="popup-area">
+  		<div class="popup">
+  			<form action="form1.php" method="post" class="form">
+  				<label for="formTel" class="popup__label">Введите</label>
+  				<input type="tel" name="tel" class="popup__tel" id="formTel" placeholder="Ваш номер">
+  				<p class="popup__message">и наш менеджер даст бесплатную консультацию, как увеличить посещаемость вашего салона красоты</p>
+  				<input type="submit" class="popup__submit" value="Получить">
+  			</form>
+  		</div>
+  		<span class="popup-area__close"></span>
+  	</div>
+  	<script type="text/javascript">
+  		$(".button").click(function(){
+  			$(".popup-area").addClass("popup-area--show");
+  		});
+  		$(".popup-area__close").click(function(){
+  			$(".popup-area").removeClass("popup-area--show");
+  		});
+  	</script>
   </body>
 </html>
