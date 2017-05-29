@@ -261,7 +261,8 @@ h1{
 		left: -40px;
 		display: flex;
 		align-items: center;
-		height: 100%;
+		width: 20px;
+		height: 50px;
 		font-size: 22px;
 		animation: blink 2s linear infinite;
 	}
@@ -273,7 +274,8 @@ h1{
 		right: -40px;
 		display: flex;
 		align-items: center;
-		height: 100%;
+		width: 20px;
+		height: 50px;
 		font-size: 22px;
 		animation: blink 2s linear infinite;
 	}
@@ -390,10 +392,11 @@ h1{
 
 .section--two{
 	align-items: flex-start;
+	background-color: #fff;
 }
 
 .section--two .wrapper{
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 h2{
@@ -403,23 +406,60 @@ h2{
 	font-size: 28px;
 }
 
-.section--two__left {
+.section__left {
+	display: flex;
+	flex-wrap: wrap;
     width: 450px
 }
 
-.section--two__right {
+.section__right {
     width: 450px;
-    border: 1px solid #ff7276;
     border-radius: 2px;
     overflow: hidden;
+    box-shadow: 0 2px 5px 0px rgba(33, 33, 33, 0.1);
 }
 
-.section--two__p {
+.section__p {
 	margin-bottom: 20px;
+	padding-left: 60px;
     line-height: 1.5;
+    position: relative;
+   
+    &:before{
+    	content: "";
+		position: absolute;
+		top: 0;
+		left: -10px;
+		width: 50px;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: 50%;
+    }
 }
 
+.section__p--info{
+	&:before{
+		background-image: url("../img/info.svg");
+	}
+}
 
+.section__p--target{
+	&:before{
+		background-image: url("../img/target.svg");
+	}
+}
+
+.section__p--price{
+	&:before{
+		background-image: url("../img/coin.svg");
+	}
+}
+
+.button--two{
+	width: 100%;
+	margin: 40px 0 0 0;
+}
 
 
 
