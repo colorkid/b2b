@@ -351,6 +351,7 @@ h1{
     height: 50px;
     padding-left: 12.5px;
     border: 2px solid @letterColor;
+    font-size: 16px;
     color: @letterColor;
  
     &:focus{
@@ -548,22 +549,60 @@ h2{
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
+	position: relative;
+
+	&:after{
+		content: "";
+		position: absolute;
+		top: 0;
+		right: -20px;
+		font-size: 28px;
+		color: rgba(255, 114, 118, 1);
+	}
 }
 
 .step__pic--created{
 	background-image: url("../img/microscope.svg");
+
+	&:after{
+		content: "➜";
+		animation: blink-1 4s linear infinite;
+	}
 }
 
 .step__pic--develop{
 	background-image: url("../img/development.svg");
+
+	&:after{
+
+	}
 }
 
 .step__pic--reklama{
 	background-image: url("../img/point.svg");
+
+	&:after{
+		
+	}
 }
 
+
+@keyframes blink-1 { 
+	50% { color: rgb(255, 114, 118); } 
+	51% { color: rgba(255, 114, 118, 0); } 
+	100% { color: rgba(255, 114, 118, 0); } 
+}
+
+
+
+
+
 .step__pic--profit{
-	background-image: url("../img/data-analysis-symbol.svg");
+	background-image: url("../img/chronometer.svg");
+
+		&:after{
+			content: "";
+		}
 }
 
 .step__description{
@@ -632,10 +671,21 @@ h2{
   100%{bottom: 30px}
 }
 
+
 @media (max-width: 1239px) {
 	h1{
 		max-width: 840px;
 		font-size: 44px;
+	}
+
+	.steps{
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+
+	.step{
+		width: 35%;
+		margin: 40px 0;
 	}
 }
 
@@ -734,6 +784,16 @@ h2{
 	.button--two{
 		margin: 20px 0 0 0;
 	}
+
+	.steps{
+		justify-content: center;
+	}
+
+	.step{
+		width: 50%;
+		min-width: 360px;
+		margin: 40px 5%;
+	}
 }
 
 @media (max-width: 479px) {
@@ -759,5 +819,10 @@ h2{
 
 	.word-hide--small-size{
 		display: inline;
+	}
+
+	.step{
+		width: 100%;
+		min-width: auto;
 	}
 }
