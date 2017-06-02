@@ -259,60 +259,6 @@ h1{
     }
 }
 
-.button--one{
-	position: relative;
-
-    &:before{
-		content: "";
-		position: absolute;
-		top: 0;
-		left: -40px;
-		display: flex;
-		align-items: center;
-		width: 25px;
-		height: 50px;
-		background-image: url("../img/down-arrow.svg");
-		background-position: 50%;
-		background-size: 20px;
-		background-repeat: no-repeat;
-		font-size: 22px;
-		transform: rotate(-90deg);
-		opacity: 0.5;
-		animation: jump-right 1.5s infinite;
-	}
-
-	 &:after{
-		content: "";
-		position: absolute;
-		top: 0;
-		right: -40px;
-		display: flex;
-		align-items: center;
-		width: 25px;
-		height: 50px;
-		background-image: url("../img/down-arrow.svg");
-		background-position: 50%;
-		background-size: 20px;
-		background-repeat: no-repeat;
-		font-size: 22px;
-		transform: rotate(90deg);
-		opacity: 0.5;
-		animation: jump-left 1.5s infinite;
-	}
-}
-
-@keyframes jump-left {
-  0%{opacity: 0.5;}
-  50%{opacity: 1;}
-  100%{opacity: 0.5;}
-}
-
-@keyframes jump-right {
-  0%{opacity: 0.5;}
-  50%{opacity: 1;}
-  100%{opacity: 0.5;}
-}
-
 .popup-area{
 	display: flex;
 	justify-content: center;
@@ -534,9 +480,11 @@ h2{
 	background-image: url("../img/scissors.png");
 }
 
+/*
 .arrow-down--two{
 	background-image: url("../img/down-arrow--two.svg");
 }
+*/
 
 .section--three{
 	min-height: auto;
@@ -664,6 +612,7 @@ h2{
 }
 
 .section--four{
+	align-items: flex-start;
 	box-shadow: none;
 
 	&:before{
@@ -691,17 +640,70 @@ h2{
 	}
 }
 
+.efficiency-area{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+}
 
+.efficiency{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	max-width: 500px;
+	margin: 20px 5%;
+}
 
+.efficiency__pic{
+	min-width: 75px;
+	height: 75px;
+	margin-right: 20px;
+	background-color: @background;
+	background-repeat: no-repeat;
+	background-size: 65%;
+	background-position: 50%;
+}
 
+.efficiency__pic--site{
+	background-image: url("../img/development2.svg");
+}
 
+.efficiency__pic--target{
+	background-image: url("../img/point2.svg");
+}
 
+.efficiency__pic--property{
+	background-image: url("../img/invoice.svg");
+}
 
+.efficiency__title {
+	text-transform: uppercase;
+    font-weight: 600;
+    font-size: 18px;
+}
 
+.efficiency__description{
 
+}
 
+.efficiency-area__button{
+	width: 100%;
+	max-width: 500px;
+	margin: 40px 0 0 0;
+}
 
-
+.decoration{
+	position: absolute;
+	top: 0;
+	left: 135px;
+	background-image: url("../img/hand.png");
+	background-repeat: no-repeat;
+	background-size: 75%;
+	background-position: 0 0;
+	width: 500px;
+	height: 100%;
+}
 
 
 
