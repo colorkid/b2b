@@ -414,6 +414,31 @@ h2{
     box-shadow: 0 2px 5px 0px rgba(33, 33, 33, 0.1);
 }
 
+.section__map{
+	position: relative;
+
+	&:after{
+		content: "";
+		position: absolute;
+		top: 234px;
+		left: 152px;
+		width: 175px;
+		height: 175px;
+		border-radius: 50%;
+		background-color: rgba(255, 114, 118, 0.5);
+	}
+
+	&:before{
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+}
+
 .section__p {
 	margin-bottom: 25px;
 	padding-left: 60px;
@@ -479,12 +504,6 @@ h2{
 	background-position: top center;
 	background-image: url("../img/scissors.png");
 }
-
-/*
-.arrow-down--two{
-	background-image: url("../img/down-arrow--two.svg");
-}
-*/
 
 .section--three{
 	min-height: auto;
@@ -597,14 +616,42 @@ h2{
 }
 
 .result-price{
+	display: flex;
+	align-items: center;
 	margin: 80px 0 60px 0;
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: 600;
 	color: @accent;
 
 	div{
 		margin: 0 5px;
 	}
+}
+
+.result-price__words{
+	color: #333;
+}
+
+.result-price__old{
+	position: relative;
+	font-weight: 500;
+	font-size: 20px;
+	color: #666666;
+
+	&:before{
+		content: "";
+		position: absolute;
+		top: 14px;
+		left: -10%;
+		width: 110%;
+		height: 3px;
+		transform: rotate(5deg);
+		background: @accent;
+	}
+}
+
+.result-price__new {
+    font-size: 32px;
 }
 
 .result-price__ruble{
@@ -728,7 +775,13 @@ h2{
 	height: 100%;
 }
 
+.hidden {
+	opacity: 0;
+}
 
+.visible {
+	opacity: 1;
+}
 
 
 
@@ -881,6 +934,10 @@ h2{
 	.efficiency{
 		margin: 20px 5%;
 	}
+
+	.efficiency-area__button{
+		max-width: 480px;
+	}
 }
 
 @media (max-width: 767px) {
@@ -957,6 +1014,10 @@ h2{
 	.efficiency__description {
 		max-width: 360px;
     	line-height: 1.5;
+	}
+
+	.efficiency-area__button{
+		max-width: 360px;
 	}
 }
 
