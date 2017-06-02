@@ -642,7 +642,7 @@ h2{
 
 .efficiency-area{
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	flex-wrap: wrap;
 	width: 100%;
 }
@@ -650,9 +650,10 @@ h2{
 .efficiency{
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	width: 100%;
-	max-width: 500px;
-	margin: 20px 5%;
+	max-width: 480px;
+	margin: 20px 0;
 }
 
 .efficiency__pic{
@@ -677,6 +678,28 @@ h2{
 	background-image: url("../img/invoice.svg");
 }
 
+.efficiency__pic--responsive{
+	background-image: url("../img/responsive.svg");
+}
+
+.efficiency__pic--fast{
+	background-image: url("../img/fast.svg");
+}
+
+.efficiency__pic--action{
+	background-image: url("../img/chronometer2.svg");
+}
+
+.efficiency__pic--area{
+	background-image: url("../img/signal-post.svg");
+}
+
+.efficiency__right {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
 .efficiency__title {
 	text-transform: uppercase;
     font-weight: 600;
@@ -689,8 +712,8 @@ h2{
 
 .efficiency-area__button{
 	width: 100%;
-	max-width: 500px;
-	margin: 40px 0 0 0;
+	max-width: 360px;
+	margin: 60px 0 0 0;
 }
 
 .decoration{
@@ -854,6 +877,10 @@ h2{
 	.word-hide--middle-size{
 		display: inline;
 	}
+
+	.efficiency{
+		margin: 20px 5%;
+	}
 }
 
 @media (max-width: 767px) {
@@ -873,6 +900,7 @@ h2{
 
 	.section{
 		height: auto;
+		min-height: auto;
 	}
 
 	.arrow-down{
@@ -904,6 +932,31 @@ h2{
 		width: 50%;
 		min-width: 360px;
 		margin: 40px 5%;
+	}
+
+	.efficiency {
+		flex-wrap: wrap;
+    	margin: 20px 0;
+	}
+
+	.efficiency__pic{
+		margin-right: 0;
+	}
+
+	.efficiency__right{
+		justify-content: center;
+		margin-top: 20px;
+		text-align: center;
+	}
+
+	.efficiency__title{
+		margin-bottom: 5px;
+		font-size: 16px;
+	}
+
+	.efficiency__description {
+		max-width: 360px;
+    	line-height: 1.5;
 	}
 }
 
