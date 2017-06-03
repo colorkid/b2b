@@ -800,23 +800,20 @@ h2{
     background: #fff;
     overflow: hidden;
     transition: box-shadow 0.2s;
-
-    &:hover{
-    	box-shadow: 0 2px 5px 0px rgba(33, 33, 33, 0.1);
-    }
+    box-shadow: 0 2px 5px 0px rgba(33, 33, 33, 0.1);
 }
 
 .person__pic {
 	width: 100%;
 	height: 250px;
-	background-image: url("../img/webdev.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;
-	background-position: 0 0;
+	background-position: center;
+	background-color: #F7F7F7;
 }
 
 .person__pic--manager{
-	background-image: url("../img/manager.jpg");
+	background-image: url("../img/marketolog.jpg");
 }
 
 .person__pic--developer{
@@ -824,11 +821,11 @@ h2{
 }
 
 .person__pic--foto{
-
+	background-image: url("../img/foto.jpg");
 }
 
 .person__pic--designer{
-
+	background-image: url("../img/designer.jpg");
 }
 
 .person__footer{
