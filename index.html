@@ -46,9 +46,7 @@
 	  				<button class="button button--two">Получить консультацию</button>
 	  			</div>
 	  			<div class="section--two__right">
-	  				<div class="section__map">
-	  					<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A818cff0345d734b095601f91264da83c0ad1a816cd7a2c13b0f425adb52cd3fa&amp;width=486&amp;height=597&amp;lang=ru_RU&amp;scroll=false"></script>
-	  				</div>
+	  				<div class="section__map"></div>
 	  			</div>
 	  		</div>
 	  	</section>
@@ -195,7 +193,7 @@
   	</footer>
   	<div class="popup-area">
   		<div class="popup">
-  			<form action="form1.php" method="post" class="form">
+  			<form action="form.php" method="post" class="form">
   				<span class="popup__title">Получить консультацию</span>
   				<label for="formTel" class="popup__label">Введите номер телефона</label>
   				<input type="tel" name="tel" class="popup__tel" id="formTel" placeholder="8 (999) 999-9999">
@@ -260,11 +258,14 @@
 		   	$(".efficiency").addClass("hidden").viewportChecker({
 		        classToAdd: 'animated fadeIn'
 		    });
+
+		    $(".person").addClass("hidden").viewportChecker({
+		        classToAdd: 'animated fadeIn'
+		    });
 		});
 	</script>
 	<script type="text/javascript">
 		$(".popup__tel").mask("8 (000) 000-0000");
 	</script>
   </body>
- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </html>

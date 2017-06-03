@@ -417,27 +417,24 @@ h2{
 }
 
 .section__map{
+	width: 486px;
+	height: 597px;
 	position: relative;
+	background-image: url("../img/map-min.png");
+	background-position: 50%;
+	background-size: auto;
+	background-repeat: no-repeat;
 
 	&:after{
 		content: "";
 		position: absolute;
-		top: 234px;
-		left: 152px;
+		top: 212.5px;
+		left: 155px;
 		width: 175px;
 		height: 175px;
+		border: 2px solid @accent;
 		border-radius: 50%;
 		background-color: rgba(255, 114, 118, 0.5);
-	}
-
-	&:before{
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 1;
 	}
 }
 
