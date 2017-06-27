@@ -4,14 +4,14 @@
 
 
 /* Сюда впишите свою эл. почту */
- $address = "colorkid@yandex.ru";
+ $address = "colorkid@yandex.ru, zharenkov.artem@gmail.com";
 
 /* А здесь прописывается текст сообщения, \n - перенос строки */
  $mes = "Телефон: $contact_tel";
 
 /* А эта функция как раз занимается отправкой письма на указанный вами email */
 $sub='ЛИД с салон за 33 900 руб.'; //сабж
-$email='<salon@ampermedia.ru>'; // от кого
+$email='<lead@beauty.ampermedia.ru>'; // от кого
  $send = mail ($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFrom:$email");
 
 ini_set('short_open_tag', 'On');
@@ -27,11 +27,21 @@ header('Refresh: 3; URL=index.html');
 <style type="text/css">
 body
 {
-   
-   background: rgba(248,183,56,1) url(img/zakaz.jpg) top -70% center no-repeat;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   background: rgba(255, 114, 118, 1);
+   position: relative;
+   font-family: sans-serif;
    
 }
-
+body:after{
+    content: "Спасибо за заявку, с Вами свяжется менеджер в ближайшее время.";
+    color: #fff;
+    font-size: 38px;
+    font-weight: bold;
+}
 <script type="text/javascript">
 setTimeout('location.replace("/index.html")', 3000);
 /*Изменить текущий адрес страницы через 3 секунды (3000 миллисекунд)*/
